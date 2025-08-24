@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 // Define the shape of your app config here
 export interface AppConfig {
-  [key: string]: any;
+  apiKey?: string;
 }
 
 const LOCAL_STORAGE_KEY = 'appConfig';
@@ -18,10 +18,10 @@ function getInitialConfig(): AppConfig {
       }
     }
   }
-  return {};
+  return { apiKey: '' };
 }
 
-export function useAppConfig<T extends AppConfig = AppConfig>() {
+export function useAppConfig() {
   const [config, setConfig] = useState<AppConfig>(getInitialConfig());
 
   const setConfigValue = (key: string, value: any) => {
@@ -34,7 +34,7 @@ export function useAppConfig<T extends AppConfig = AppConfig>() {
     });
   };
 
-  const getConfigValue = (key: string) => config[key];
+  const getConfigValue = (key: keyof AppConfig) => config[key];
 
   return { config, setConfigValue, getConfigValue };
 }
