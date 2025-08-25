@@ -86,7 +86,7 @@ Output should be the input translated to High Imperial and nothing else.
 
 Ensure the translation is rhythmic, uses gerunds and filler words appropriately, and maintains the confusing yet decipherable quality of High Imperial.`;
 
-export const fetchTranslation = async (inputText: string, apiKey: string): Promise<string> => {
+export const translateToHighImperial = async (inputText: string, apiKey: string): Promise<string> => {
     try {
         const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
         const response = await openai.chat.completions.create({

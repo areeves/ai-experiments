@@ -2,10 +2,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+
 import Home from './pages/Home';
 import Demo1 from './pages/Demo1';
 import Demo2 from './pages/Demo2';
 import ConfigPage from './pages/Config';
+import HighImperialTranslator from './pages/HighImperialTranslator';
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
           <Link to="/" style={{ color: '#61dafb', marginRight: '1rem' }}>Home</Link>
           <Link to="/demo1" style={{ color: '#61dafb', marginRight: '1rem' }}>Demo 1</Link>
           <Link to="/demo2" style={{ color: '#61dafb', marginRight: '1rem' }}>Demo 2</Link>
+          <Link to="/translator" style={{ color: '#61dafb', marginRight: '1rem' }}>High Imperial Translator</Link>
           <Link to="/config" style={{ color: '#61dafb', marginLeft: '1rem' }}>Config</Link>
         </nav>
         <div style={{ padding: '2rem' }}>
@@ -23,6 +26,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/demo1" element={<Demo1 />} />
             <Route path="/demo2" element={<Demo2 />} />
+            <Route path="/translator" element={<HighImperialTranslator />} />
             <Route path="/config" element={<ConfigPage />} />
           </Routes>
         </div>
