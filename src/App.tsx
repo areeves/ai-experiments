@@ -14,12 +14,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <nav style={{ padding: '1rem', background: '#282c34' }}>
-          <Link to="/" style={{ color: '#61dafb', marginRight: '1rem' }}>Home</Link>
-          <Link to="/demo1" style={{ color: '#61dafb', marginRight: '1rem' }}>Demo 1</Link>
-          <Link to="/demo2" style={{ color: '#61dafb', marginRight: '1rem' }}>Demo 2</Link>
-          <Link to="/translator" style={{ color: '#61dafb', marginRight: '1rem' }}>High Imperial Translator</Link>
-          <Link to="/config" style={{ color: '#61dafb', marginLeft: '1rem' }}>Config</Link>
+        <nav className="navbar">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/demo1" className="nav-link">Demo 1</Link>
+          <Link to="/demo2" className="nav-link">Demo 2</Link>
+          <Link to="/translator" className="nav-link">High Imperial Translator</Link>
+          <Link to="/config" className="nav-link">Config</Link>
         </nav>
         <div style={{ padding: '2rem' }}>
           <Routes>
