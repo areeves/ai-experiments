@@ -33,16 +33,12 @@ const ScrubberPage: React.FC = () => {
         <div>
           <h3>Scrubbing Steps</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            {results.map((step, idx) => (
-              <li key={idx} style={{ marginBottom: 16, borderBottom: '1px solid #eee', paddingBottom: 8 }}>
-                <strong>{step.label}</strong>
-                <div style={{ fontSize: '0.95em', color: '#555' }}>{step.message}</div>
-                <div style={{ marginTop: 8 }}>
-                  <label>Output:</label>
-                  <pre style={{ background: '#f8f8f8', padding: 8, borderRadius: 4, whiteSpace: 'pre-wrap' }}>{step.output}</pre>
-                </div>
-              </li>
-            ))}
+                  {results.map((step, idx) => (
+                    <li key={idx} style={{ marginBottom: 16, borderBottom: '1px solid #eee', paddingBottom: 8 }}>
+                      <strong>{step.label}</strong>
+                      <div style={{ fontSize: '0.95em', color: '#555' }}>{step.message}</div>
+                    </li>
+                  ))}
           </ul>
           <div style={{ marginTop: 24 }}>
             <label htmlFor="final-output"><strong>Final Output:</strong></label>
