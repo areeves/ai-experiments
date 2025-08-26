@@ -14,9 +14,10 @@ import { MdTranslate } from 'react-icons/md';
 
 
 function App() {
+  const basename = process.env.NODE_ENV === 'production' ? '/ai-experiments' : undefined;
   return (
-    <Router>
-      <div className="App">
+    <Router basename={basename}>
+  <div className="App">
         <nav className="navbar">
             <Link to="/" className="nav-link">{FaHome({ style: { marginRight: 8 } })}Home</Link>
             <Link to="/translator" className="nav-link">{MdTranslate({ style: { marginRight: 8 } })}High Imperial Translator</Link>
@@ -32,7 +33,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </Router>
+  </Router>
   );
 }
 
