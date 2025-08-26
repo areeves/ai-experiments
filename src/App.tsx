@@ -18,10 +18,10 @@ function App() {
     <Router>
       <div className="App">
         <nav className="navbar">
-          <Link to="/" className="nav-link"><FaHome style={{ marginRight: 8 }} />Home</Link>
-          <Link to="/translator" className="nav-link"><MdTranslate style={{ marginRight: 8 }} />High Imperial Translator</Link>
-          <Link to="/config" className="nav-link"><FaCog style={{ marginRight: 8 }} />Config</Link>
-          <Link to="/scrubber" className="nav-link"><FaEraser style={{ marginRight: 8 }} />AI Text Scrubber</Link>
+            <Link to="/" className="nav-link">{FaHome({ style: { marginRight: 8 } })}Home</Link>
+            <Link to="/translator" className="nav-link">{MdTranslate({ style: { marginRight: 8 } })}High Imperial Translator</Link>
+            <Link to="/config" className="nav-link">{FaCog({ style: { marginRight: 8 } })}Config</Link>
+            <Link to="/scrubber" className="nav-link">{FaEraser({ style: { marginRight: 8 } })}AI Text Scrubber</Link>
         </nav>
         <div style={{ padding: '2rem' }}>
           <Routes>
