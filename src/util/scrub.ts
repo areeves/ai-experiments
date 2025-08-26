@@ -1,3 +1,5 @@
+/* eslint-disable no-control-regex */
+
 export type StepResult = {
   label: string;
   input: string;
@@ -5,7 +7,8 @@ export type StepResult = {
   message: string;
 };
 
-export type Step = (input: string) => StepResult;
+export type Step = (input: string) => StepResult
+;
 
 export function runSteps(steps: Step[], initialInput: string): StepResult[] {
   let input = initialInput;
